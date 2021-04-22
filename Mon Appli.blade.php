@@ -1,20 +1,15 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.base')
 
-        <title>Mon Appli</title>
 
+@section('content')
+
+        <img src="{{asset('/images/FR.png')}}" alt="French flag" class="rounded shadow-2xl h-32 mt-12">
         
-    </head>
-    <body>
-        <h1>Bonjour de la France !<h1>
+        <h1 class="sm:text-5xl text-3xl text-indigo-600 mt-5 font-semibold">Best World Time !<h1>
 
-            <p>Il est actuellement {{date('H:i')}}</p>
+        <p class="text-lg text-gray-800">Il est actuellement {{date('H:i')}}</p>
 
-        <footer>
-            <p>&copy; Copyright 2021 &middot; <a href="#">A propos de</a></p> 
-        <footer>
-    </body>
-</html>
+        <p><a href="{{route('help')}}" class="text-indigo-500 hover:text-indigo-700 underline flex justify-center items-center">Aide</a></p>
+
+@endsection
+
